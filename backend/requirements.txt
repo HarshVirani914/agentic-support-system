@@ -1,0 +1,26 @@
+# Core
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic>=2.0
+pydantic-settings
+
+# LangChain & LangGraph (let pip resolve versions)
+langchain
+langchain-community
+langgraph
+langchain-groq
+
+# LLM & Embeddings
+sentence-transformers
+
+# Vector Database
+qdrant-client
+
+# Database (optional for MVP - can skip initially)
+# asyncpg
+# sqlalchemy[asyncio]
+
+# Utilities
+httpx
+python-multipart

@@ -10,3 +10,6 @@ out/
 
 __pycache__/
 venv/
+
+.cursor/
+agentic-support-system_api_key.txt

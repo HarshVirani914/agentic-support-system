@@ -1,0 +1,50 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.api.routes import chat
+from app.models.schemas import HealthResponse
+
+app = FastAPI(
+    title="Agentic Support System API",
+    description="Multi-agent customer support system",
+    version="0.1.0",
+)
+
+# CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Update in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include routers
+app.include_router(chat.router, prefix="/api", tags=["chat"])
+
+
+@app.get("/", response_model=HealthResponse)
+async def health_check():
+    """Health check endpoint."""
+    return HealthResponse(status="healthy", version="0.1.0")
+
+
+@app.get("/health", response_model=HealthResponse)
+async def health():
+    """Health check endpoint."""
+    return HealthResponse(status="healthy", version="0.1.0")
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(
+        "app.main:app",
+        host=settings.API_HOST,
+        port=settings.API_PORT,
+        reload=True if settings.ENVIRONMENT == "development" else False,
+    )
