@@ -1,4 +1,3 @@
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -7,12 +6,22 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import chat
 from app.models.schemas import HealthResponse
+from app.config import settings
+from app.core.exceptions import (
+    AppException,
+    app_exception_handler,
+    general_exception_handler
+)
 
 app = FastAPI(
     title="Agentic Support System API",
     description="Multi-agent customer support system",
     version="0.1.0",
 )
+
+# Register exception handlers
+app.add_exception_handler(AppException, app_exception_handler)
+app.add_exception_handler(Exception, general_exception_handler)
 
 # CORS middleware
 app.add_middleware(
