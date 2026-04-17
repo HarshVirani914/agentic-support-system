@@ -16,6 +16,7 @@ class AgentState(TypedDict):
     Attributes:
         question: User's input question
         limit: Number of documents to retrieve
+        category: Query category for routing (order, shipping, general)
         documents: Retrieved documents from vector search
         answer: Generated answer from LLM
         sources: Source documents with metadata
@@ -24,6 +25,9 @@ class AgentState(TypedDict):
     # Input from user
     question: str
     limit: int  # Number of documents to retrieve
+    
+    # Determined by classifier
+    category: str  # Query category: 'order', 'shipping', 'general'
     
     # Retrieved from vector store
     documents: list[dict]

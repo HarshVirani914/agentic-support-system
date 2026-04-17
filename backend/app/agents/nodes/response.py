@@ -14,6 +14,7 @@ def generate_node(state: AgentState) -> dict:
     
     Input from state:
         - question: User's query
+        - category: Query category (for context-aware responses)
         - documents: Retrieved documents from search node
     
     Adds to state:
@@ -25,6 +26,7 @@ def generate_node(state: AgentState) -> dict:
     """
     
     question = state["question"]
+    category = state.get("category", "general")
     documents = state.get("documents", [])
     
     if not documents:
@@ -38,8 +40,20 @@ def generate_node(state: AgentState) -> dict:
         for i, doc in enumerate(documents)
     ])
     
-    # Create prompt for LLM
-    prompt = f"""You are a helpful customer support assistant. Answer the question based on the context provided.
+    # Category-specific guidance
+    category_guidance = {
+        "order": "Focus on order details, refund policies, return procedures, and billing information.",
+        "shipping": "Focus on delivery times, tracking information, shipping costs, and package handling.",
+        "general": "Provide helpful information about accounts, policies, and general inquiries."
+    }
+    
+    guidance = category_guidance.get(category, category_guidance["general"])
+    
+    # Create category-aware prompt for LLM
+    prompt = f"""You are a helpful customer support assistant specializing in {category}-related queries.
+{guidance}
+
+Answer the question based on the context provided.
 
 Context:
 {context}
@@ -56,7 +70,7 @@ Answer: Provide a clear, concise answer based on the context. If the context doe
             logger.error("LLM returned empty response")
             raise LLMError("LLM returned empty response")
         
-        logger.info(f"Response generated | Length: {len(response.content)} chars")
+        logger.info(f"Response generated | Category: {category} | Length: {len(response.content)} chars")
     
     except Exception as e:
         logger.error(f"Response generation failed | Error: {str(e)}")
