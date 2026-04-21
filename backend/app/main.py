@@ -10,7 +10,7 @@ from app.config import settings
 from app.core.exceptions import (
     AppException,
     app_exception_handler,
-    general_exception_handler
+    general_exception_handler,
 )
 
 app = FastAPI(
@@ -22,7 +22,9 @@ app = FastAPI(
 app.add_exception_handler(AppException, app_exception_handler)
 app.add_exception_handler(Exception, general_exception_handler)
 
-cors_origins = settings.CORS_ORIGINS.split(",") if settings.CORS_ORIGINS != "*" else ["*"]
+cors_origins = (
+    settings.CORS_ORIGINS.split(",") if settings.CORS_ORIGINS != "*" else ["*"]
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -50,7 +52,7 @@ if __name__ == "__main__":
 
     uvicorn.run(
         "app.main:app",
-        host=settings.API_HOST,
-        port=settings.API_PORT,
+        host=settings.HOST,
+        port=settings.PORT,
         reload=True if settings.ENVIRONMENT == "development" else False,
     )
