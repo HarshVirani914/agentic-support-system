@@ -1,7 +1,3 @@
-"""
-Centralized exception handling for the application
-"""
-
 from fastapi import HTTPException, Request, status
 from fastapi.responses import JSONResponse
 from typing import Union
@@ -40,9 +36,6 @@ class InvalidInputError(AppException):
 
 
 async def app_exception_handler(request: Request, exc: AppException) -> JSONResponse:
-    """
-    Global handler for application exceptions
-    """
     return JSONResponse(
         status_code=exc.status_code,
         content={
@@ -54,9 +47,6 @@ async def app_exception_handler(request: Request, exc: AppException) -> JSONResp
 
 
 async def general_exception_handler(request: Request, exc: Exception) -> JSONResponse:
-    """
-    Catch-all handler for unexpected exceptions
-    """
     return JSONResponse(
         status_code=500,
         content={

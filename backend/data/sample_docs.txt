@@ -4,31 +4,276 @@
 
 Our refund policy allows customers to request a full refund within 30 days of purchase for any reason. Items must be in original condition with tags attached. Refunds are processed within 5-7 business days to the original payment method.
 
-For sale items, refunds are issued as store credit only. Final sale items marked with "AS-IS" are not eligible for refunds.
+For sale items, refunds are issued as store credit only. Final sale items marked with "AS-IS" are not eligible for refunds. Digital products and downloadable content are non-refundable once accessed.
+
+To request a refund, log into your account, go to Order History, and click "Request Refund" next to the eligible order. You'll receive a return shipping label via email within 24 hours.
+
+## Return Process
+
+Returns must be initiated within 30 days of delivery. Items should be unused, unworn, and in original packaging with all tags attached. Once we receive your return, inspection takes 2-3 business days. Approved refunds are processed immediately to your original payment method.
+
+If returning a defective item, we cover return shipping costs. For all other returns, a $7.99 return shipping fee will be deducted from your refund. You can also use our prepaid return label for $7.99.
+
+Gift returns are refunded as store credit to the recipient. The original purchaser will not be notified of the return.
+
+## Exchange Policy
+
+We offer free exchanges for different sizes or colors within 45 days of purchase. To exchange an item, request an exchange through your account, and we'll send you the new item immediately. Return the original item using the provided label within 14 days of receiving the exchange.
+
+Exchanges are subject to availability. If the desired item is out of stock, we'll issue store credit for the full amount.
 
 ## Shipping Information
 
-We offer free standard shipping on orders over $50. Standard shipping typically takes 3-5 business days within the continental US. Express shipping (1-2 days) is available for an additional $15.
+We offer free standard shipping on orders over $50. Standard shipping typically takes 3-5 business days within the continental US. Express shipping (1-2 days) is available for an additional $15. Overnight shipping is available for $25 in select metro areas.
 
-International shipping is available to select countries and takes 7-14 business days. Customers are responsible for any customs fees or import duties.
+International shipping is available to over 100 countries and takes 7-14 business days. International customers are responsible for any customs fees, import duties, or taxes. We use DHL Express for international shipments.
+
+You'll receive a tracking number via email once your order ships. Track your package in real-time through your account dashboard.
+
+## Order Tracking
+
+Track your order anytime by logging into your account and viewing Order History. You'll see real-time updates including: Order Confirmed, Processing, Shipped, Out for Delivery, and Delivered.
+
+If your tracking shows no movement for 3+ days, contact support immediately. We'll investigate with the carrier and provide updates within 24 hours.
+
+For orders marked as "Delivered" but not received, check with neighbors, building management, or household members. If still missing after 48 hours, file a claim with us and we'll open a carrier investigation.
+
+## Lost or Damaged Packages
+
+If your package is lost in transit, contact us within 7 days of the expected delivery date. We'll file a claim with the carrier and either reship your order or issue a full refund.
+
+For damaged items, take photos of the packaging and product damage. Contact support within 48 hours of delivery. We'll arrange for a replacement or full refund without requiring a return of the damaged item.
+
+All shipments over $100 are automatically insured. For high-value orders, we require signature confirmation to prevent theft.
+
+## Order Cancellation
+
+Orders can be cancelled within 2 hours of placement if they haven't shipped. To cancel, go to Order History and click "Cancel Order". If the cancellation button is unavailable, the order has already been processed and must be returned after delivery.
+
+Expedited orders (Express, Overnight) cannot be cancelled as they're processed immediately. Custom or personalized orders cannot be cancelled once production begins.
+
+Refunds for cancelled orders are processed within 3-5 business days to your original payment method.
 
 ## Product Warranty
 
-All electronics come with a 1-year manufacturer warranty covering defects in materials and workmanship. Warranty does not cover damage from misuse, accidents, or normal wear and tear.
+All electronics come with a 1-year manufacturer warranty covering defects in materials and workmanship. Warranty does not cover damage from misuse, accidents, normal wear and tear, or unauthorized repairs.
 
-To make a warranty claim, contact our support team with your order number and photos of the defect. We will provide a prepaid return label.
+To make a warranty claim, contact our support team with your order number, photos of the defect, and a description of the issue. We'll provide a prepaid return label within 24 hours. Warranty claims are processed within 5-7 business days.
+
+Extended warranties (2-year and 3-year plans) are available at checkout for an additional fee. Extended warranties cover accidental damage and provide expedited replacement service.
+
+## Product Troubleshooting
+
+Before returning an electronic item, try these troubleshooting steps:
+- Ensure the device is fully charged
+- Check all cable connections
+- Restart the device by holding the power button for 10 seconds
+- Update to the latest firmware through the device settings
+- Reset to factory settings (backup your data first)
+
+For specific product issues, visit our Support Center for detailed troubleshooting guides and video tutorials. Our technical support team is available via live chat Monday-Friday 9 AM - 8 PM EST.
 
 ## Account Management
 
-You can update your account information, view order history, and manage subscriptions by logging into your account at any time. If you forget your password, use the "Reset Password" link on the login page.
+You can update your account information, view order history, manage subscriptions, and save payment methods by logging into your account at any time. Your account dashboard shows all past purchases, tracking information, and downloadable invoices.
 
-To delete your account, contact customer support. Please note that deleting your account will remove all order history and saved preferences.
+If you forget your password, use the "Reset Password" link on the login page. You'll receive a password reset email within 5 minutes. The reset link expires after 1 hour for security.
+
+To delete your account, contact customer support. Please note that deleting your account will permanently remove all order history, saved addresses, payment methods, and preferences. Active orders will still be fulfilled, but you won't be able to track them after account deletion.
+
+## Password Security
+
+We recommend using a strong password with at least 12 characters, including uppercase letters, lowercase letters, numbers, and special characters. Never share your password or use the same password across multiple websites.
+
+If you suspect unauthorized access to your account, change your password immediately and contact support. We'll review recent account activity and secure your account.
+
+We use industry-standard encryption to protect your password and never store passwords in plain text. Our team will never ask for your password via email or phone.
+
+## Payment Methods
+
+We accept Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, Google Pay, and Shop Pay. We also offer Buy Now Pay Later options through Klarna and Afterpay for orders over $50.
+
+All transactions are secured with 256-bit SSL encryption. We don't store your full credit card number - only the last 4 digits for order reference.
+
+International customers can pay in their local currency. Currency conversion rates are determined by your bank or credit card provider.
+
+## Payment Issues
+
+If your payment is declined, check that:
+- Card information is entered correctly
+- Billing address matches your card statement
+- Card has sufficient funds or available credit
+- Card hasn't expired
+- Your bank hasn't flagged the transaction as suspicious
+
+Contact your bank if the issue persists. Some banks block international or online transactions by default and require manual authorization.
+
+For security, we may require additional verification for large orders or orders shipping to addresses different from the billing address.
+
+## Store Credit and Gift Cards
+
+Store credit never expires and can be applied to any purchase including sale items. You can check your store credit balance in your account dashboard.
+
+Gift cards are available in denominations of $25, $50, $100, and $200. Digital gift cards are delivered via email instantly. Physical gift cards ship for free and arrive within 5-7 business days.
+
+Gift cards never expire and can be combined with promotional codes. Unused gift card balances remain on the card for future purchases.
+
+## Promotional Codes and Discounts
+
+Promotional codes can be applied at checkout. Only one promo code can be used per order. Promo codes cannot be combined with other offers unless explicitly stated.
+
+We regularly offer discounts for:
+- First-time customers (10% off)
+- Email subscribers (15% off your next purchase)
+- Birthday month (20% off one item)
+- Seasonal sales (up to 50% off)
+- Free shipping on orders over $50
+
+Sign up for our email newsletter to receive exclusive offers and early access to sales.
+
+## Subscription Service
+
+Subscribe to receive your favorite products automatically every 30, 60, or 90 days. Subscribers save 15% on every order and get free shipping regardless of order size.
+
+Manage your subscription anytime through your account:
+- Change delivery frequency
+- Skip a delivery
+- Add or remove products
+- Update payment method
+- Pause subscription (up to 3 months)
+- Cancel anytime (no fees)
+
+You'll receive a reminder email 3 days before each shipment. Make any changes before the processing date to apply them to the next order.
+
+## Membership Program
+
+Join our VIP membership for $99/year and receive:
+- Free 2-day shipping on all orders
+- 20% off every purchase
+- Exclusive access to new products
+- Early access to sales
+- Birthday gift
+- Dedicated VIP support line
+- No minimum purchase required
+
+Memberships can be purchased in your account dashboard and renew annually. Cancel anytime for a prorated refund of unused months.
+
+## Product Availability
+
+If an item shows "Out of Stock", you can sign up for back-in-stock notifications. We'll email you immediately when the item is available again.
+
+Pre-order items will display an estimated shipping date. You won't be charged until the item ships. Pre-order prices are guaranteed even if the regular price increases before shipping.
+
+Limited edition items are marked as "Limited Quantity" and are available while supplies last. These items cannot be restocked once sold out.
+
+## Size Guide and Fit
+
+Unsure about sizing? Check our detailed size guide with measurements for each product. Customer reviews often include fit feedback (runs small, runs large, true to size).
+
+We offer free exchanges for size within 45 days. Order multiple sizes and return the ones that don't fit for free.
+
+For custom or made-to-order items, measurements must be exact. We provide a measurement guide with step-by-step instructions. Custom items cannot be returned or exchanged unless defective.
+
+## Product Care and Maintenance
+
+Extend the life of your products with proper care:
+- Electronics: Keep away from water, extreme temperatures, and direct sunlight
+- Clothing: Follow care label instructions, wash in cold water, air dry when possible
+- Accessories: Store in provided dust bag, avoid exposure to moisture and chemicals
+
+Product-specific care instructions are included with your order and available on product pages. Damage from improper care is not covered under warranty.
+
+## Bulk Orders
+
+For orders of 10+ units of the same item, contact our bulk sales team for discounted pricing. We offer special rates for:
+- Corporate gifting
+- Event giveaways
+- Resellers
+- Non-profit organizations
+
+Bulk orders may qualify for:
+- Volume discounts (10-30% off)
+- Custom packaging
+- Direct shipping to multiple addresses
+- Net 30 payment terms (approved accounts)
+
+Contact bulk@example.com for a custom quote.
+
+## Business Accounts
+
+Create a business account for streamlined ordering and invoicing. Business accounts receive:
+- Net 30 payment terms (after credit approval)
+- Multiple user access with different permission levels
+- Purchase order support
+- Detailed invoice history
+- Dedicated account manager
+- Volume discount pricing
+
+Apply for a business account through your account settings. Approval typically takes 1-2 business days.
 
 ## Contact Support
 
 Our customer support team is available Monday-Friday, 9 AM - 6 PM EST.
-- Email: support@example.com
-- Phone: 1-800-EXAMPLE
-- Live chat available on our website during business hours
+- Email: support@example.com (24-hour response time)
+- Phone: 1-800-EXAMPLE (9 AM - 6 PM EST)
+- Live chat: Available on our website during business hours
+- SMS: Text "HELP" to 55555 for quick assistance
 
-Average response time for emails is 24 hours. For urgent issues, please call or use live chat.
+For urgent issues outside business hours, email urgent@example.com. Emergency inquiries are monitored 24/7 and receive priority response within 2 hours.
+
+VIP members have access to a dedicated support line with shorter wait times and priority handling.
+
+## Support Hours and Response Times
+
+- Live Chat: Average wait time under 2 minutes
+- Phone: Average wait time under 5 minutes
+- Email: Response within 24 hours (usually within 6 hours)
+- Social Media: Response within 4 hours during business hours
+
+Peak support times are Monday mornings and during major sales. For faster service, use live chat or call during non-peak hours (Tuesday-Thursday, 10 AM - 4 PM EST).
+
+## Order Issues
+
+Common order issues and solutions:
+- Wrong item received: Contact support with photos, we'll ship the correct item immediately
+- Missing items: Check the packing slip, some orders ship in multiple packages. If item is confirmed missing, we'll reship at no cost
+- Defective product: Return for full refund or free replacement
+- Late delivery: We'll investigate with carrier and may offer compensation for significant delays
+
+We stand behind every purchase. If something isn't right, we'll make it right.
+
+## Privacy and Security
+
+We take your privacy seriously. Your personal information is encrypted and never shared with third parties for marketing purposes. Read our full Privacy Policy for details on data collection, usage, and protection.
+
+To enhance account security, enable two-factor authentication (2FA) in your account settings. We'll send a verification code to your phone each time you log in from a new device.
+
+Report suspicious emails claiming to be from us to security@example.com. We'll never ask for your password, credit card number, or social security number via email.
+
+## Accessibility
+
+We're committed to making our website accessible to all users. Our site meets WCAG 2.1 Level AA standards and works with screen readers and assistive technologies.
+
+If you encounter accessibility issues or need assistance placing an order, call our accessibility support line at 1-800-ACCESS. Representatives can help you browse products and complete purchases over the phone.
+
+## Sustainability Commitment
+
+We're committed to reducing our environmental impact through:
+- Recyclable and biodegradable packaging
+- Carbon-neutral shipping options (add $2 at checkout)
+- Product recycling program (mail back old items for store credit)
+- Sustainable sourcing and ethical manufacturing
+
+Join our recycling program by requesting a prepaid return label. Send us your used electronics, clothing, or accessories and receive store credit based on item condition.
+
+## International Customers
+
+We ship to over 100 countries worldwide. International orders:
+- Ship via DHL Express (7-14 business days)
+- Include tracking and insurance
+- May be subject to customs duties and taxes (customer responsibility)
+- Cannot be expedited beyond standard international shipping
+
+Duties and taxes are calculated by your country's customs agency. Contact your local customs office for estimates. Packages held in customs are outside our control, but we'll help you navigate the process.
+
+Returns from international customers are accepted within 30 days. Customer is responsible for return shipping costs unless item is defective.

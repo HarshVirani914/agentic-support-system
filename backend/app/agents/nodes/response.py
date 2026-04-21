@@ -1,7 +1,3 @@
-"""
-Response Generation Node - Generates answers using LLM
-"""
-
 from app.agents.state import AgentState
 from app.core.llm import llm
 from app.core.exceptions import LLMError, DocumentNotFoundError
@@ -9,22 +5,6 @@ from app.utils.logger import logger
 
 
 def generate_node(state: AgentState) -> dict:
-    """
-    Generate node: Creates answer using retrieved documents.
-    
-    Input from state:
-        - question: User's query
-        - category: Query category (for context-aware responses)
-        - documents: Retrieved documents from search node
-    
-    Adds to state:
-        - answer: Generated answer
-        - sources: Source documents for citation
-    
-    Returns:
-        dict with updates to merge into state
-    """
-    
     question = state["question"]
     category = state.get("category", "general")
     documents = state.get("documents", [])
@@ -34,13 +14,11 @@ def generate_node(state: AgentState) -> dict:
             "No relevant documents found for the query. Please try rephrasing your question."
         )
     
-    # Format context from documents
     context = "\n\n".join([
         f"Document {i+1}:\n{doc['text']}"
         for i, doc in enumerate(documents)
     ])
     
-    # Category-specific guidance
     category_guidance = {
         "order": "Focus on order details, refund policies, return procedures, and billing information.",
         "shipping": "Focus on delivery times, tracking information, shipping costs, and package handling.",
@@ -49,7 +27,6 @@ def generate_node(state: AgentState) -> dict:
     
     guidance = category_guidance.get(category, category_guidance["general"])
     
-    # Create category-aware prompt for LLM
     prompt = f"""You are a helpful customer support assistant specializing in {category}-related queries.
 {guidance}
 
@@ -63,7 +40,6 @@ Question: {question}
 Answer: Provide a clear, concise answer based on the context. If the context doesn't contain relevant information, say so."""
     
     try:
-        # Generate answer
         response = llm.invoke(prompt)
         
         if not response.content or not response.content.strip():
@@ -76,7 +52,6 @@ Answer: Provide a clear, concise answer based on the context. If the context doe
         logger.error(f"Response generation failed | Error: {str(e)}")
         raise LLMError(f"Failed to generate response: {str(e)}")
     
-    # Prepare sources for response
     sources = [
         {
             "text": doc["text"],
@@ -85,7 +60,6 @@ Answer: Provide a clear, concise answer based on the context. If the context doe
         for doc in documents
     ]
     
-    # Return updates to merge into state
     return {
         "answer": response.content,
         "sources": sources

@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     API_PORT: int = 8000
     ENVIRONMENT: str = "development"
 
-    # LangSmith (Optional - Latest format)
+    # LangSmith (Optional)
     LANGCHAIN_TRACING_V2: bool = False
     LANGCHAIN_API_KEY: str = ""
     LANGCHAIN_PROJECT: str = "agentic-support-system"
@@ -26,7 +26,7 @@ class Settings(BaseSettings):
 
     # Embeddings
     EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
-    HF_TOKEN: str = ""  # HuggingFace token (optional, removes warning)
+    HF_TOKEN: str = ""  # HuggingFace token (optional)
 
     # Vector DB Collection
     COLLECTION_NAME: str = "support_docs"

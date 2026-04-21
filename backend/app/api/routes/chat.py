@@ -8,15 +8,11 @@ router = APIRouter()
 
 @router.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    """Process a chat message and return an answer with sources."""
-    
-    # Validate input
     if not request.message or not request.message.strip():
         raise InvalidInputError("Message cannot be empty")
     
     if request.limit < 1 or request.limit > 10:
         raise InvalidInputError("Limit must be between 1 and 10")
     
-    # Execute agent (exceptions are handled by global handler)
     result = run_agent(request.message, limit=request.limit)
     return ChatResponse(**result)

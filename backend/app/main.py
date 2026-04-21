@@ -19,32 +19,27 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# Register exception handlers
 app.add_exception_handler(AppException, app_exception_handler)
 app.add_exception_handler(Exception, general_exception_handler)
 
-# CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Update in production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Include routers
 app.include_router(chat.router, prefix="/api", tags=["chat"])
 
 
 @app.get("/", response_model=HealthResponse)
 async def health_check():
-    """Health check endpoint."""
     return HealthResponse(status="healthy", version="0.1.0")
 
 
 @app.get("/health", response_model=HealthResponse)
 async def health():
-    """Health check endpoint."""
     return HealthResponse(status="healthy", version="0.1.0")
 
 
