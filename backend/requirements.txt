@@ -10,9 +10,7 @@ langchain
 langchain-community
 langgraph
 langchain-groq
-
-# LLM & Embeddings
-sentence-transformers
+langchain-google-genai
 
 # Vector Database
 qdrant-client

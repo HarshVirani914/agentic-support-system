@@ -8,6 +8,9 @@ class Settings(BaseSettings):
 
     # LLM API
     GROQ_API_KEY: str
+    
+    # Embeddings API
+    GOOGLE_API_KEY: str
 
     # Vector Database
     QDRANT_URL: str
@@ -24,10 +27,6 @@ class Settings(BaseSettings):
     LANGCHAIN_API_KEY: str = ""
     LANGCHAIN_PROJECT: str = "agentic-support-system"
     LANGCHAIN_ENDPOINT: str = ""
-
-    # Embeddings
-    EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
-    HF_TOKEN: str = ""  # HuggingFace token (optional)
 
     # Vector DB Collection
     COLLECTION_NAME: str = "support_docs"

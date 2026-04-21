@@ -103,7 +103,7 @@ Health check endpoint.
 
 **embeddings.py** - Text embeddings
 - Sentence Transformers (all-MiniLM-L6-v2)
-- 384-dimensional vectors
+- 768-dimensional vectors (Google Gemini embedding-001)
 
 **vectorstore.py** - Qdrant operations
 - Collection management
