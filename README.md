@@ -446,5 +446,5 @@ MIT
 
 ## Links
 
-- Live Demo: _Coming soon_
+- Live Demo: https://agentic-support-system.vercel.app/
 - API Documentation: `http://localhost:8000/docs` (when running)
