@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     API_HOST: str = "0.0.0.0"
     API_PORT: int = 8000
     ENVIRONMENT: str = "development"
+    CORS_ORIGINS: str = "*"
 
     # LangSmith (Optional)
     LANGCHAIN_TRACING_V2: bool = False
