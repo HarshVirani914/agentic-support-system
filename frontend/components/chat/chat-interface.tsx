@@ -10,6 +10,7 @@ import { ChatMessage as ChatMessageType } from "@/lib/types";
 import { AlertCircle, Bot, Loader2, Send, Trash2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { ChatMessage } from "./chat-message";
+import { SiGithub } from "@icons-pack/react-simple-icons";
 
 export const ChatInterface = () => {
   const [messages, setMessages] = useState<ChatMessageType[]>([]);
@@ -84,7 +85,9 @@ export const ChatInterface = () => {
     <div className="flex flex-col h-screen w-full max-w-5xl mx-auto p-4">
       <div className="mb-6 flex items-start justify-between">
         <div>
-          <h1 className="text-3xl font-semibold tracking-tight mb-1">AI Customer Support</h1>
+          <h1 className="text-3xl font-semibold tracking-tight mb-1">
+            AI Customer Support
+          </h1>
           <p className="text-[15px] text-muted-foreground">
             Ask me anything about our products and services
           </p>
@@ -105,53 +108,55 @@ export const ChatInterface = () => {
       <Card className="flex-1 mb-4 overflow-hidden flex flex-col">
         <ScrollArea className="h-full w-full">
           <div className="p-4 min-h-full">
-          {messages.length === 0 ? (
-            <div className="h-full flex flex-col items-center justify-center text-center px-4">
-              <Bot className="h-16 w-16 text-muted-foreground mb-6" />
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">
-                Start a conversation
-              </h2>
-              <p className="text-[15px] text-muted-foreground mb-8 max-w-md">
-                Try asking one of these questions:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-3xl">
-                {sampleQuestions.map((question, idx) => (
-                  <Button
-                    key={idx}
-                    variant="outline"
-                    className="text-left h-auto py-4 px-5 justify-start hover:bg-muted/50"
-                    onClick={() => handleSampleQuestion(question)}
-                  >
-                    <span className="text-[14px] leading-relaxed">{question}</span>
-                  </Button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="max-w-4xl mx-auto space-y-4">
-              {messages.map((message, idx) => (
-                <ChatMessage key={idx} message={message} />
-              ))}
-              {isLoading && (
-                <div className="flex items-center gap-3">
-                  <Avatar className="h-8 w-8">
-                    <AvatarFallback className="bg-primary/10">
-                      <Bot className="h-4 w-4" />
-                    </AvatarFallback>
-                  </Avatar>
-                  <Card className="px-4 py-3 bg-muted">
-                    <div className="flex items-center gap-2">
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                      <span className="text-sm text-muted-foreground">
-                        Thinking...
+            {messages.length === 0 ? (
+              <div className="h-full flex flex-col items-center justify-center text-center px-4">
+                <Bot className="h-16 w-16 text-muted-foreground mb-6" />
+                <h2 className="text-2xl font-semibold tracking-tight mb-3">
+                  Start a conversation
+                </h2>
+                <p className="text-[15px] text-muted-foreground mb-8 max-w-md">
+                  Try asking one of these questions:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-3xl">
+                  {sampleQuestions.map((question, idx) => (
+                    <Button
+                      key={idx}
+                      variant="outline"
+                      className="text-left h-auto py-4 px-5 justify-start hover:bg-muted/50"
+                      onClick={() => handleSampleQuestion(question)}
+                    >
+                      <span className="text-[14px] leading-relaxed">
+                        {question}
                       </span>
-                    </div>
-                  </Card>
+                    </Button>
+                  ))}
                 </div>
-              )}
-              <div ref={scrollRef} />
-            </div>
-          )}
+              </div>
+            ) : (
+              <div className="max-w-4xl mx-auto space-y-4">
+                {messages.map((message, idx) => (
+                  <ChatMessage key={idx} message={message} />
+                ))}
+                {isLoading && (
+                  <div className="flex items-center gap-3">
+                    <Avatar className="h-8 w-8">
+                      <AvatarFallback className="bg-primary/10">
+                        <Bot className="h-4 w-4" />
+                      </AvatarFallback>
+                    </Avatar>
+                    <Card className="px-4 py-3 bg-muted">
+                      <div className="flex items-center gap-2">
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        <span className="text-sm text-muted-foreground">
+                          Thinking...
+                        </span>
+                      </div>
+                    </Card>
+                  </div>
+                )}
+                <div ref={scrollRef} />
+              </div>
+            )}
           </div>
         </ScrollArea>
       </Card>
@@ -166,7 +171,10 @@ export const ChatInterface = () => {
       )}
 
       <Card className="p-4">
-        <form onSubmit={handleSubmit} className="flex gap-2 max-w-4xl mx-auto w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="flex gap-2 max-w-4xl mx-auto w-full"
+        >
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -183,6 +191,20 @@ export const ChatInterface = () => {
           </Button>
         </form>
       </Card>
+
+      <div className="flex items-center justify-center gap-4 mt-4 text-sm text-muted-foreground">
+        <span>Powered by LangGraph</span>
+        <span>•</span>
+        <a
+          href="https://github.com/HarshVirani914/agentic-support-system"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 hover:text-foreground transition-colors"
+        >
+          <SiGithub className="h-4 w-4" />
+          View on GitHub
+        </a>
+      </div>
     </div>
   );
 };

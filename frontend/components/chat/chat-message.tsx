@@ -35,6 +35,15 @@ export const ChatMessage = ({ message }: ChatMessageProps) => {
     }
   };
 
+  const formatTimestamp = (timestamp: number) => {
+    const date = new Date(timestamp);
+    return date.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+  };
+
   return (
     <div
       className={cn(
@@ -77,11 +86,16 @@ export const ChatMessage = ({ message }: ChatMessageProps) => {
           </div>
         </Card>
 
-        {!isUser && message.category && (
-          <Badge className={cn("text-xs", getCategoryColor(message.category))}>
-            {message.category.charAt(0).toUpperCase() + message.category.slice(1)} Query
-          </Badge>
-        )}
+        <div className="flex items-center gap-2 px-1">
+          <span className="text-xs text-muted-foreground">
+            {formatTimestamp(message.timestamp)}
+          </span>
+          {!isUser && message.category && (
+            <Badge className={cn("text-xs", getCategoryColor(message.category))}>
+              {message.category.charAt(0).toUpperCase() + message.category.slice(1)} Query
+            </Badge>
+          )}
+        </div>
 
         {!isUser && message.sources && message.sources.length > 0 && (
           <Collapsible open={sourcesOpen} onOpenChange={setSourcesOpen} className="w-full">
