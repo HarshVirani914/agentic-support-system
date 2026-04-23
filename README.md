@@ -65,7 +65,7 @@ JSON Response (answer + sources + category)
 - **LangChain** - LLM abstractions
 - **Groq** - LLM API (Llama 3.3 70B)
 - **Qdrant Cloud** - Vector database
-- **Sentence Transformers** - Embeddings (all-MiniLM-L6-v2)
+- **Google Gemini Embedding 2 Preview** - Embeddings (768-dimensional embeddings)
 - **LangSmith** - Observability and tracing
 - **Pydantic** - Data validation
 
@@ -94,7 +94,7 @@ agentic-support-system/
 │   │   │       └── response.py       # Answer generation
 │   │   ├── api/routes/               # FastAPI endpoints
 │   │   ├── core/
-│   │   │   ├── embeddings.py         # Sentence Transformers
+│   │   │   ├── embeddings.py         # Google Gemini Embedding 2 Preview
 │   │   │   ├── vectorstore.py        # Qdrant operations
 │   │   │   ├── llm.py                # Groq LLM setup
 │   │   │   └── exceptions.py         # Custom exceptions
