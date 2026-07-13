@@ -40,3 +40,24 @@ def test_delete_thread_empty_thread_id_returns_400():
 
     assert response.status_code == 400
     assert "Thread ID cannot be empty" in response.json()["message"]
+
+
+def test_chat_response_includes_grounding_fields(monkeypatch):
+    def fake_run_agent(question, limit=3, thread_id="default"):
+        return {
+            "answer": "hi",
+            "sources": [],
+            "category": "general",
+            "retry_count": 1,
+            "grounded": True,
+            "grading_reason": "matches source",
+        }
+
+    monkeypatch.setattr("app.api.routes.chat.run_agent", fake_run_agent)
+
+    response = client.post("/api/chat", json={"message": "hello"})
+    body = response.json()
+
+    assert body["retry_count"] == 1
+    assert body["grounded"] is True
+    assert body["grading_reason"] == "matches source"

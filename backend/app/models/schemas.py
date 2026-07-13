@@ -16,6 +16,9 @@ class ChatResponse(BaseModel):
     answer: str
     sources: list[Source]
     category: str
+    retry_count: int = 0
+    grounded: bool = True
+    grading_reason: str = ""
 
 
 class HealthResponse(BaseModel):
