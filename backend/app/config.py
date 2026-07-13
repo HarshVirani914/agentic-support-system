@@ -16,6 +16,9 @@ class Settings(BaseSettings):
     QDRANT_URL: str
     QDRANT_API_KEY: str
 
+    # Persistence
+    DATABASE_URL: str
+
     # API Settings
     API_HOST: str = "0.0.0.0"
     API_PORT: int = 8000

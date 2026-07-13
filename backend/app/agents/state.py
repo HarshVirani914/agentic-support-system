@@ -9,3 +9,4 @@ class AgentState(TypedDict):
     documents: list[dict]
     answer: str
     sources: list[dict]
+    messages: Annotated[list[dict], add_messages]

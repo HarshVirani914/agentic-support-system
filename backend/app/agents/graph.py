@@ -1,4 +1,8 @@
 from langgraph.graph import StateGraph, END
+from langgraph.graph.state import CompiledStateGraph
+from langgraph.checkpoint.base import BaseCheckpointSaver
+from langgraph.checkpoint.postgres import PostgresSaver
+from psycopg_pool import ConnectionPool
 from app.agents.state import AgentState
 from app.agents.nodes.classifier import classifier_node
 from app.agents.nodes.specialized_search import (
@@ -8,10 +12,11 @@ from app.agents.nodes.specialized_search import (
 )
 from app.agents.nodes.response import generate_node
 from app.agents.router import route_by_category
+from app.config import settings
 from app.utils.logger import logger
 
 
-def create_agent_graph():
+def create_agent_graph(checkpointer: BaseCheckpointSaver) -> CompiledStateGraph:
     workflow = StateGraph(AgentState)
 
     workflow.add_node("classifier", classifier_node)
@@ -37,14 +42,21 @@ def create_agent_graph():
     workflow.add_edge("general_search", "generate")
     workflow.add_edge("generate", END)
 
-    graph = workflow.compile()
-    return graph
+    return workflow.compile(checkpointer=checkpointer)
 
 
-agent_graph = create_agent_graph()
+_pool = ConnectionPool(
+    conninfo=settings.DATABASE_URL,
+    max_size=5,
+    kwargs={"autocommit": True, "prepare_threshold": 0},
+)
+_checkpointer = PostgresSaver(_pool)
+_checkpointer.setup()
+
+agent_graph = create_agent_graph(checkpointer=_checkpointer)
 
 
-def run_agent(question: str, limit: int = 3) -> dict:
+def run_agent(question: str, limit: int = 3, thread_id: str = "default") -> dict:
     initial_state: AgentState = {
         "question": question,
         "limit": limit,
@@ -52,14 +64,17 @@ def run_agent(question: str, limit: int = 3) -> dict:
         "documents": [],
         "answer": "",
         "sources": [],
+        "messages": [],
     }
 
+    config = {"configurable": {"thread_id": thread_id}}
+
     logger.info(
-        f"Agent execution started | Question: {question[:50]}... | Limit: {limit}"
+        f"Agent execution started | Question: {question[:50]}... | Limit: {limit} | Thread: {thread_id}"
     )
 
     try:
-        result = agent_graph.invoke(initial_state)
+        result = agent_graph.invoke(initial_state, config=config)
         logger.info(
             f"Agent execution complete | Category: {result.get('category', 'unknown')} | Answer length: {len(result.get('answer', ''))} chars"
         )
@@ -70,5 +85,5 @@ def run_agent(question: str, limit: int = 3) -> dict:
     return {
         "answer": result["answer"],
         "sources": result["sources"],
-        "category": result.get("category", "general")
+        "category": result.get("category", "general"),
     }
