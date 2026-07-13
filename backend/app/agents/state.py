@@ -10,3 +10,6 @@ class AgentState(TypedDict):
     answer: str
     sources: list[dict]
     messages: Annotated[list[dict], add_messages]
+    retry_count: int
+    grounded: bool
+    grading_reason: str

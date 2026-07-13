@@ -16,7 +16,11 @@ def test_checkpointer_persists_state_across_invocations(monkeypatch):
     monkeypatch.setattr("app.agents.graph.order_search_node", fake_search)
     monkeypatch.setattr("app.agents.graph.shipping_search_node", fake_search)
     monkeypatch.setattr("app.agents.graph.general_search_node", fake_search)
+    def fake_grade(state):
+        return {"grounded": True, "grading_reason": "test", "retry_count": 0}
+
     monkeypatch.setattr("app.agents.graph.generate_node", fake_generate)
+    monkeypatch.setattr("app.agents.graph.grade_node", fake_grade)
 
     graph = create_agent_graph(checkpointer=MemorySaver())
     config = {"configurable": {"thread_id": "test-thread"}}

@@ -11,7 +11,8 @@ from app.agents.nodes.specialized_search import (
     general_search_node,
 )
 from app.agents.nodes.response import generate_node
-from app.agents.router import route_by_category
+from app.agents.nodes.grade import grade_node
+from app.agents.router import route_by_category, route_after_grade
 from app.config import settings
 from app.utils.logger import logger
 
@@ -24,6 +25,7 @@ def create_agent_graph(checkpointer: BaseCheckpointSaver) -> CompiledStateGraph:
     workflow.add_node("shipping_search", shipping_search_node)
     workflow.add_node("general_search", general_search_node)
     workflow.add_node("generate", generate_node)
+    workflow.add_node("grade", grade_node)
 
     workflow.set_entry_point("classifier")
 
@@ -40,7 +42,18 @@ def create_agent_graph(checkpointer: BaseCheckpointSaver) -> CompiledStateGraph:
     workflow.add_edge("order_search", "generate")
     workflow.add_edge("shipping_search", "generate")
     workflow.add_edge("general_search", "generate")
-    workflow.add_edge("generate", END)
+    workflow.add_edge("generate", "grade")
+
+    workflow.add_conditional_edges(
+        "grade",
+        route_after_grade,
+        {
+            "order_search": "order_search",
+            "shipping_search": "shipping_search",
+            "general_search": "general_search",
+            "end": END,
+        },
+    )
 
     return workflow.compile(checkpointer=checkpointer)
 
@@ -65,6 +78,9 @@ def run_agent(question: str, limit: int = 3, thread_id: str = "default") -> dict
         "answer": "",
         "sources": [],
         "messages": [],
+        "retry_count": 0,
+        "grounded": False,
+        "grading_reason": "",
     }
 
     config = {"configurable": {"thread_id": thread_id}}
@@ -86,4 +102,7 @@ def run_agent(question: str, limit: int = 3, thread_id: str = "default") -> dict
         "answer": result["answer"],
         "sources": result["sources"],
         "category": result.get("category", "general"),
+        "retry_count": result.get("retry_count", 0),
+        "grounded": result.get("grounded", True),
+        "grading_reason": result.get("grading_reason", ""),
     }
