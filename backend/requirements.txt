@@ -7,11 +7,7 @@ pydantic-settings
 
 # LangChain & LangGraph (let pip resolve versions)
 langchain
-# Pinned to 0.4.0: ragas's LangchainLLMWrapper imports
-# langchain_community.chat_models.vertexai, which was removed in
-# langchain-community>=0.4.1. We don't use VertexAI; this pin just keeps the
-# import path RAGAS expects available.
-langchain-community==0.4.0
+langchain-community
 langgraph
 langchain-groq
 langchain-google-genai
@@ -35,10 +31,3 @@ python-multipart
 
 # Dev / Testing
 pytest
-
-# Evaluation
-# Pinned to 0.3.9: ragas 0.4.x has the same langchain_community.chat_models.vertexai
-# import issue as above but at a version where a matching langchain-community
-# pin isn't available together with our langchain 1.x stack; 0.3.9 works with
-# langchain-community==0.4.0.
-ragas==0.3.9
