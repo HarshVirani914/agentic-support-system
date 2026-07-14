@@ -1,17 +1,23 @@
 from app.agents.state import AgentState
 from app.core.llm import llm
+from app.utils.conversation import format_history
 from app.utils.logger import logger
 
 
 def classifier_node(state: AgentState) -> dict:
     question = state["question"]
-    
+    history = format_history(state.get("messages", []))
+
+    history_block = f"\nPrior conversation:\n{history}\n" if history else ""
+
     prompt = f"""You are a customer support query classifier. Categorize the following question into ONE of these categories:
 
 Categories:
 1. "order" - Questions about orders, purchases, refunds, returns, billing, payments
 2. "shipping" - Questions about delivery, tracking, shipping times, shipping costs
 3. "general" - Questions about accounts, passwords, policies, or anything else
+{history_block}
+Use the prior conversation only to resolve follow-up questions (e.g. "what about international orders?" after a shipping question) — classify based on what the current question is actually asking about.
 
 Question: {question}
 

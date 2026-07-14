@@ -4,6 +4,13 @@ from app.utils.logger import logger
 
 MAX_RETRIES = 2
 
+LOW_CONFIDENCE_FALLBACK = (
+    "I don't have enough information in our policy documents to answer this confidently — "
+    "it may be specific to your account or order, which I don't have access to. Please "
+    "contact our support team at support@example.com (or live chat) with your order number "
+    "so a team member can look into it directly."
+)
+
 
 def _parse_grading_response(content: str) -> tuple[bool, str]:
     grounded = "GROUNDED: yes" in content
@@ -31,8 +38,22 @@ def grade_node(state: AgentState) -> dict:
 
     logger.info(f"Grade | Grounded: {grounded} | Reason: {reason}")
 
-    if grounded or retry_count >= MAX_RETRIES:
-        return {"grounded": grounded, "grading_reason": reason, "retry_count": retry_count}
+    if grounded:
+        return {
+            "grounded": True,
+            "grading_reason": reason,
+            "retry_count": retry_count,
+            "retries_exhausted": False,
+        }
+
+    if retry_count >= MAX_RETRIES:
+        return {
+            "grounded": False,
+            "grading_reason": reason,
+            "retry_count": retry_count,
+            "retries_exhausted": True,
+            "answer": LOW_CONFIDENCE_FALLBACK,
+        }
 
     rewrite_prompt = (
         f"The question '{question}' was answered ungrounded because: {reason}\n"
@@ -45,5 +66,6 @@ def grade_node(state: AgentState) -> dict:
         "grounded": False,
         "grading_reason": reason,
         "retry_count": retry_count + 1,
+        "retries_exhausted": False,
         "question": rewritten,
     }

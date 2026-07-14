@@ -18,14 +18,11 @@ def route_by_category(state: AgentState) -> str:
     return next_node
 
 
-MAX_RETRIES = 2
-
-
 def route_after_grade(state: AgentState) -> str:
     if state.get("grounded", False):
         return "end"
 
-    if state.get("retry_count", 0) >= MAX_RETRIES:
+    if state.get("retries_exhausted", False):
         return "end"
 
     category = state.get("category", "general")

@@ -13,12 +13,12 @@ def test_route_by_category_defaults_to_general():
 
 
 def test_route_after_grade_ends_when_grounded():
-    assert route_after_grade({"grounded": True, "retry_count": 0, "category": "order"}) == "end"
+    assert route_after_grade({"grounded": True, "retries_exhausted": False, "category": "order"}) == "end"
 
 
 def test_route_after_grade_retries_when_ungrounded_and_under_limit():
-    assert route_after_grade({"grounded": False, "retry_count": 1, "category": "shipping"}) == "shipping_search"
+    assert route_after_grade({"grounded": False, "retries_exhausted": False, "category": "shipping"}) == "shipping_search"
 
 
 def test_route_after_grade_ends_when_retries_exhausted():
-    assert route_after_grade({"grounded": False, "retry_count": 2, "category": "general"}) == "end"
+    assert route_after_grade({"grounded": False, "retries_exhausted": True, "category": "general"}) == "end"

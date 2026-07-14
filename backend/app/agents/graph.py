@@ -2,6 +2,7 @@ from langgraph.graph import StateGraph, END
 from langgraph.graph.state import CompiledStateGraph
 from langgraph.checkpoint.base import BaseCheckpointSaver
 from langgraph.checkpoint.postgres import PostgresSaver
+from langchain_core.messages import HumanMessage, AIMessage
 from psycopg_pool import ConnectionPool
 from app.agents.state import AgentState
 from app.agents.nodes.classifier import classifier_node
@@ -72,6 +73,7 @@ agent_graph = create_agent_graph(checkpointer=_checkpointer)
 def run_agent(question: str, limit: int = 3, thread_id: str = "default") -> dict:
     initial_state: AgentState = {
         "question": question,
+        "original_question": question,
         "limit": limit,
         "category": "",
         "documents": [],
@@ -81,6 +83,7 @@ def run_agent(question: str, limit: int = 3, thread_id: str = "default") -> dict
         "retry_count": 0,
         "grounded": False,
         "grading_reason": "",
+        "retries_exhausted": False,
     }
 
     config = {"configurable": {"thread_id": thread_id}}
@@ -93,6 +96,18 @@ def run_agent(question: str, limit: int = 3, thread_id: str = "default") -> dict
         result = agent_graph.invoke(initial_state, config=config)
         logger.info(
             f"Agent execution complete | Category: {result.get('category', 'unknown')} | Answer length: {len(result.get('answer', ''))} chars"
+        )
+        # Record the finished turn once, outside the internal retry loop, so
+        # multi-turn context is available to the classifier/generator on the
+        # next call without duplicating a message per reflection retry.
+        agent_graph.update_state(
+            config,
+            {
+                "messages": [
+                    HumanMessage(content=question),
+                    AIMessage(content=result["answer"]),
+                ]
+            },
         )
     except Exception as e:
         logger.error(f"Agent execution failed | Error: {str(e)}")
