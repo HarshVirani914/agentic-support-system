@@ -4,39 +4,47 @@
 
 Our refund policy allows customers to request a full refund within 30 days of purchase for any reason. Items must be in original condition with tags attached. Refunds are processed within 5-7 business days to the original payment method.
 
-For sale items, refunds are issued as store credit only. Final sale items marked with "AS-IS" are not eligible for refunds. Digital products and downloadable content are non-refundable once accessed.
+For sale items, refunds are issued as store credit only. Final sale items marked with "AS-IS" are not eligible for refunds. Digital products and downloadable content are non-refundable once accessed. Opened cosmetics, personal care items, and undergarments are final sale for hygiene reasons and cannot be returned.
 
 To request a refund, log into your account, go to Order History, and click "Request Refund" next to the eligible order. You'll receive a return shipping label via email within 24 hours.
+
+Refund processing time depends on your payment method. Credit and debit card refunds typically post within 5-7 business days, though your bank may take an additional billing cycle to reflect it on your statement. PayPal refunds usually appear within 3-5 business days. Buy Now Pay Later refunds (Klarna, Afterpay) are sent to the provider, who applies them to your installment plan or issues a separate refund depending on how many installments you've already paid.
+
+If you paid with a mix of store credit and a card, the store credit portion is refunded first, then any remaining amount goes back to your card.
 
 ## Return Process
 
 Returns must be initiated within 30 days of delivery. Items should be unused, unworn, and in original packaging with all tags attached. Once we receive your return, inspection takes 2-3 business days. Approved refunds are processed immediately to your original payment method.
 
-If returning a defective item, we cover return shipping costs. For all other returns, a $7.99 return shipping fee will be deducted from your refund. You can also use our prepaid return label for $7.99.
+If returning a defective item, we cover return shipping costs. For all other returns, a $7.99 return shipping fee will be deducted from your refund. You can also use our prepaid return label for $7.99. Large or bulky items (furniture, appliances over 50 lbs) require a $35 return shipping fee due to freight carrier costs, and a pickup must be scheduled rather than dropped off.
 
 Gift returns are refunded as store credit to the recipient. The original purchaser will not be notified of the return.
 
+If a return fails inspection (missing tags, signs of wear, missing accessories), we'll notify you by email with photos and give you the option to have the item shipped back to you at your expense, or to accept a partial refund reflecting the item's condition.
+
 ## Exchange Policy
 
-We offer free exchanges for different sizes or colors within 45 days of purchase. To exchange an item, request an exchange through your account, and we'll send you the new item immediately. Return the original item using the provided label within 14 days of receiving the exchange.
+We offer free exchanges for different sizes or colors within 45 days of purchase. To exchange an item, request an exchange through your account, and we'll send you the new item immediately. Return the original item using the provided label within 14 days of receiving the exchange. If the original item isn't returned within 14 days, we'll charge your original payment method for its full price.
 
-Exchanges are subject to availability. If the desired item is out of stock, we'll issue store credit for the full amount.
+Exchanges are subject to availability. If the desired item is out of stock, we'll issue store credit for the full amount. If the replacement item costs more than the original, you'll be charged the difference; if it costs less, we'll refund the difference to your original payment method.
 
 ## Shipping Information
 
-We offer free standard shipping on orders over $50. Standard shipping typically takes 3-5 business days within the continental US. Express shipping (1-2 days) is available for an additional $15. Overnight shipping is available for $25 in select metro areas.
+We offer free standard shipping on orders over $50. Standard shipping typically takes 3-5 business days within the continental US. Express shipping (1-2 days) is available for an additional $15. Overnight shipping is available for $25 in select metro areas. Orders placed after 1 PM EST are processed the next business day; orders placed on weekends or holidays are processed the following business day.
+
+During peak holiday periods (Black Friday through December 20), standard shipping times may extend to 7-10 business days due to carrier volume. We publish annual holiday shipping cutoff dates on our website — orders placed after the cutoff for a given shipping speed are not guaranteed to arrive before December 25.
 
 International shipping is available to over 100 countries and takes 7-14 business days. International customers are responsible for any customs fees, import duties, or taxes. We use DHL Express for international shipments.
 
-You'll receive a tracking number via email once your order ships. Track your package in real-time through your account dashboard.
+You'll receive a tracking number via email once your order ships. Track your package in real-time through your account dashboard. Note that tracking numbers can take up to 24 hours to become active in the carrier's system after we generate the shipping label.
 
 ## Order Tracking
 
 Track your order anytime by logging into your account and viewing Order History. You'll see real-time updates including: Order Confirmed, Processing, Shipped, Out for Delivery, and Delivered.
 
-If your tracking shows no movement for 3+ days, contact support immediately. We'll investigate with the carrier and provide updates within 24 hours.
+If your tracking shows no movement for 3+ days, contact support immediately. We'll investigate with the carrier and provide updates within 24 hours. Note that "no movement" during a scheduled carrier facility transfer (visible as "Departed Facility" with no new scan for 24-48 hours) is usually normal and not cause for immediate concern.
 
-For orders marked as "Delivered" but not received, check with neighbors, building management, or household members. If still missing after 48 hours, file a claim with us and we'll open a carrier investigation.
+For orders marked as "Delivered" but not received, check with neighbors, building management, or household members. If still missing after 48 hours, file a claim with us and we'll open a carrier investigation. Apartment and multi-unit building deliveries account for the majority of "delivered but not received" cases — carriers sometimes leave packages at the building's main entrance or mailroom rather than your specific unit.
 
 ## Lost or Damaged Packages
 
@@ -44,23 +52,23 @@ If your package is lost in transit, contact us within 7 days of the expected del
 
 For damaged items, take photos of the packaging and product damage. Contact support within 48 hours of delivery. We'll arrange for a replacement or full refund without requiring a return of the damaged item.
 
-All shipments over $100 are automatically insured. For high-value orders, we require signature confirmation to prevent theft.
+All shipments over $100 are automatically insured. For high-value orders, we require signature confirmation to prevent theft. If a package requiring signature confirmation is marked delivered without one (carrier error), we treat it the same as a lost package and file a claim on your behalf — you are not responsible for proving carrier negligence.
 
 ## Order Cancellation
 
 Orders can be cancelled within 2 hours of placement if they haven't shipped. To cancel, go to Order History and click "Cancel Order". If the cancellation button is unavailable, the order has already been processed and must be returned after delivery.
 
-Expedited orders (Express, Overnight) cannot be cancelled as they're processed immediately. Custom or personalized orders cannot be cancelled once production begins.
+Expedited orders (Express, Overnight) cannot be cancelled as they're processed immediately. Custom or personalized orders cannot be cancelled once production begins, which is typically within 1 hour of order placement.
 
-Refunds for cancelled orders are processed within 3-5 business days to your original payment method.
+Refunds for cancelled orders are processed within 3-5 business days to your original payment method. If your card has already been charged and the order is cancelled before shipping, you'll see a separate refund transaction rather than the original charge being voided — this is normal and depends on your bank's processing.
 
 ## Product Warranty
 
-All electronics come with a 1-year manufacturer warranty covering defects in materials and workmanship. Warranty does not cover damage from misuse, accidents, normal wear and tear, or unauthorized repairs.
+All electronics come with a 1-year manufacturer warranty covering defects in materials and workmanship. Warranty does not cover damage from misuse, accidents, normal wear and tear, unauthorized repairs, or water damage on non-waterproof devices.
 
-To make a warranty claim, contact our support team with your order number, photos of the defect, and a description of the issue. We'll provide a prepaid return label within 24 hours. Warranty claims are processed within 5-7 business days.
+To make a warranty claim, contact our support team with your order number, photos of the defect, and a description of the issue. We'll provide a prepaid return label within 24 hours. Warranty claims are processed within 5-7 business days. If the manufacturer determines the issue is not covered (e.g., accidental damage), you'll be offered a paid repair quote instead of a free replacement.
 
-Extended warranties (2-year and 3-year plans) are available at checkout for an additional fee. Extended warranties cover accidental damage and provide expedited replacement service.
+Extended warranties (2-year and 3-year plans) are available at checkout for an additional fee. Extended warranties cover accidental damage and provide expedited replacement service, including a one-time no-questions-asked accidental damage replacement per coverage year.
 
 ## Product Troubleshooting
 
@@ -71,23 +79,29 @@ Before returning an electronic item, try these troubleshooting steps:
 - Update to the latest firmware through the device settings
 - Reset to factory settings (backup your data first)
 
-For specific product issues, visit our Support Center for detailed troubleshooting guides and video tutorials. Our technical support team is available via live chat Monday-Friday 9 AM - 8 PM EST.
+For specific product issues, visit our Support Center for detailed troubleshooting guides and video tutorials. Our technical support team is available via live chat Monday-Friday 9 AM - 8 PM EST. If troubleshooting doesn't resolve the issue and the product is within its return or warranty window, our support team can convert a troubleshooting ticket directly into a return or warranty claim without you needing to submit a new request.
 
 ## Account Management
 
 You can update your account information, view order history, manage subscriptions, and save payment methods by logging into your account at any time. Your account dashboard shows all past purchases, tracking information, and downloadable invoices.
 
-If you forget your password, use the "Reset Password" link on the login page. You'll receive a password reset email within 5 minutes. The reset link expires after 1 hour for security.
+If you forget your password, use the "Reset Password" link on the login page. You'll receive a password reset email within 5 minutes. The reset link expires after 1 hour for security. If you don't receive the email, check your spam folder first; if it's still missing after 15 minutes, contact support to verify the email address on file is correct.
 
-To delete your account, contact customer support. Please note that deleting your account will permanently remove all order history, saved addresses, payment methods, and preferences. Active orders will still be fulfilled, but you won't be able to track them after account deletion.
+To delete your account, contact customer support. Please note that deleting your account will permanently remove all order history, saved addresses, payment methods, and preferences. Active orders will still be fulfilled, but you won't be able to track them after account deletion. Account deletion requests are processed within 30 days, and we retain minimal transaction records for tax and legal compliance even after deletion, as required by law.
 
 ## Password Security
 
 We recommend using a strong password with at least 12 characters, including uppercase letters, lowercase letters, numbers, and special characters. Never share your password or use the same password across multiple websites.
 
-If you suspect unauthorized access to your account, change your password immediately and contact support. We'll review recent account activity and secure your account.
+If you suspect unauthorized access to your account, change your password immediately and contact support. We'll review recent account activity and secure your account. If unauthorized orders were placed, we'll cancel any that haven't shipped and treat shipped ones as fraud claims, which do not count against your return window.
 
 We use industry-standard encryption to protect your password and never store passwords in plain text. Our team will never ask for your password via email or phone.
+
+## Two-Factor Authentication
+
+Enable two-factor authentication (2FA) in your account settings for an extra layer of security. We support SMS codes and authenticator apps (Google Authenticator, Authy). Once enabled, you'll be asked for a verification code any time you log in from a new device or browser.
+
+If you lose access to your 2FA method (lost phone, uninstalled authenticator app), contact support with your order history details to verify your identity. Account recovery in this case can take 2-3 business days due to the additional identity verification required.
 
 ## Payment Methods
 
@@ -95,7 +109,7 @@ We accept Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, Googl
 
 All transactions are secured with 256-bit SSL encryption. We don't store your full credit card number - only the last 4 digits for order reference.
 
-International customers can pay in their local currency. Currency conversion rates are determined by your bank or credit card provider.
+International customers can pay in their local currency. Currency conversion rates are determined by your bank or credit card provider, and a small foreign transaction fee may apply depending on your card issuer — this fee goes to your bank, not to us.
 
 ## Payment Issues
 
@@ -108,7 +122,19 @@ If your payment is declined, check that:
 
 Contact your bank if the issue persists. Some banks block international or online transactions by default and require manual authorization.
 
-For security, we may require additional verification for large orders or orders shipping to addresses different from the billing address.
+For security, we may require additional verification for large orders or orders shipping to addresses different from the billing address. Orders over $500 shipping to a new address for the first time are automatically held for 24 hours for manual fraud review.
+
+## Chargebacks and Payment Disputes
+
+If you believe you were charged in error, please contact our support team first — most billing issues can be resolved directly and much faster than through a bank dispute. If you file a chargeback with your bank before contacting us, your account may be temporarily suspended from placing new orders while the dispute is investigated, which can take 60-90 days depending on your card issuer.
+
+Chargebacks filed for orders that were delivered as described, where the customer simply changed their mind, are contested with delivery and tracking evidence. Repeated chargeback abuse may result in account closure and a requirement to pay via bank transfer for future orders.
+
+## Price Matching and Price Adjustments
+
+If an item you purchased drops in price within 14 days of your order (excluding flash sales, clearance, and Black Friday/Cyber Monday pricing), contact support with your order number for a one-time price adjustment issued as store credit for the difference.
+
+We do not price match against other retailers. We do match our own website's price across regions if you were charged a higher price due to a display error.
 
 ## Store Credit and Gift Cards
 
@@ -116,7 +142,13 @@ Store credit never expires and can be applied to any purchase including sale ite
 
 Gift cards are available in denominations of $25, $50, $100, and $200. Digital gift cards are delivered via email instantly. Physical gift cards ship for free and arrive within 5-7 business days.
 
-Gift cards never expire and can be combined with promotional codes. Unused gift card balances remain on the card for future purchases.
+Gift cards never expire and can be combined with promotional codes. Unused gift card balances remain on the card for future purchases. Gift cards cannot be redeemed for cash except where required by state law, and cannot be used to purchase other gift cards.
+
+## Loyalty and Rewards Points
+
+Every account automatically earns Rewards Points on purchases: 1 point per $1 spent, redeemable at 100 points = $5 in store credit. Points are credited 15 days after delivery (to allow for the return window) and expire if unused for 18 months.
+
+Rewards Points are separate from VIP Membership — you earn points whether or not you're a VIP member, and VIP members earn points at 2x the standard rate. Points earned on an order are reversed if that order is later returned or refunded.
 
 ## Promotional Codes and Discounts
 
@@ -129,7 +161,7 @@ We regularly offer discounts for:
 - Seasonal sales (up to 50% off)
 - Free shipping on orders over $50
 
-Sign up for our email newsletter to receive exclusive offers and early access to sales.
+Sign up for our email newsletter to receive exclusive offers and early access to sales. Promo codes generally cannot be applied retroactively to an order already placed, with one exception: if a code was live and valid at checkout but failed to apply due to a technical error, contact support within 24 hours for a manual adjustment.
 
 ## Subscription Service
 
@@ -143,7 +175,7 @@ Manage your subscription anytime through your account:
 - Pause subscription (up to 3 months)
 - Cancel anytime (no fees)
 
-You'll receive a reminder email 3 days before each shipment. Make any changes before the processing date to apply them to the next order.
+You'll receive a reminder email 3 days before each shipment. Make any changes before the processing date to apply them to the next order. If a subscription payment fails (expired card, insufficient funds), we'll retry the charge twice over 5 days and email you each time; after the third failed attempt, the subscription is automatically paused until you update your payment method.
 
 ## Membership Program
 
@@ -156,13 +188,13 @@ Join our VIP membership for $99/year and receive:
 - Dedicated VIP support line
 - No minimum purchase required
 
-Memberships can be purchased in your account dashboard and renew annually. Cancel anytime for a prorated refund of unused months.
+Memberships can be purchased in your account dashboard and renew annually. Cancel anytime for a prorated refund of unused months. VIP membership auto-renews by default; we send a reminder email 7 days before renewal, and you can disable auto-renew at any time from your membership settings.
 
 ## Product Availability
 
 If an item shows "Out of Stock", you can sign up for back-in-stock notifications. We'll email you immediately when the item is available again.
 
-Pre-order items will display an estimated shipping date. You won't be charged until the item ships. Pre-order prices are guaranteed even if the regular price increases before shipping.
+Pre-order items will display an estimated shipping date. You won't be charged until the item ships. Pre-order prices are guaranteed even if the regular price increases before shipping. If a pre-order is delayed by more than 30 days past the original estimate, you may cancel for a full refund even if your card has already been authorized.
 
 Limited edition items are marked as "Limited Quantity" and are available while supplies last. These items cannot be restocked once sold out.
 
@@ -197,7 +229,7 @@ Bulk orders may qualify for:
 - Direct shipping to multiple addresses
 - Net 30 payment terms (approved accounts)
 
-Contact bulk@example.com for a custom quote.
+Contact bulk@example.com for a custom quote. Bulk orders typically require 5-10 business days for fulfillment rather than our standard processing time, since large quantities are often shipped from a separate warehouse.
 
 ## Business Accounts
 
@@ -209,7 +241,7 @@ Create a business account for streamlined ordering and invoicing. Business accou
 - Dedicated account manager
 - Volume discount pricing
 
-Apply for a business account through your account settings. Approval typically takes 1-2 business days.
+Apply for a business account through your account settings. Approval typically takes 1-2 business days and requires a business tax ID.
 
 ## Contact Support
 
@@ -240,6 +272,8 @@ Common order issues and solutions:
 - Defective product: Return for full refund or free replacement
 - Late delivery: We'll investigate with carrier and may offer compensation for significant delays
 
+If an order arrives with the wrong item, you do not need to return the incorrect item before we ship the correct one — we'll include a prepaid return label for the wrong item in the replacement shipment.
+
 We stand behind every purchase. If something isn't right, we'll make it right.
 
 ## Privacy and Security
@@ -249,6 +283,12 @@ We take your privacy seriously. Your personal information is encrypted and never
 To enhance account security, enable two-factor authentication (2FA) in your account settings. We'll send a verification code to your phone each time you log in from a new device.
 
 Report suspicious emails claiming to be from us to security@example.com. We'll never ask for your password, credit card number, or social security number via email.
+
+## Data Privacy Requests (GDPR/CCPA)
+
+You have the right to request a copy of the personal data we hold about you, or to request its deletion, under GDPR (EU/UK customers) and CCPA (California customers). Submit requests through your account privacy settings or by emailing privacy@example.com.
+
+Data export requests are fulfilled within 30 days and include your order history, saved addresses, and account activity in a machine-readable format. Deletion requests are also processed within 30 days, though we retain minimal records (order and tax data) as required by law even after a deletion request, similar to account deletion.
 
 ## Accessibility
 
@@ -276,4 +316,4 @@ We ship to over 100 countries worldwide. International orders:
 
 Duties and taxes are calculated by your country's customs agency. Contact your local customs office for estimates. Packages held in customs are outside our control, but we'll help you navigate the process.
 
-Returns from international customers are accepted within 30 days. Customer is responsible for return shipping costs unless item is defective.
+Returns from international customers are accepted within 30 days. Customer is responsible for return shipping costs unless item is defective. Refunds for international orders exclude any customs duties or import taxes already paid, as these are non-refundable once assessed by the destination country.
