@@ -1,5 +1,18 @@
 from unittest.mock import patch
+from torch.nn import Sigmoid
 from app.core.reranker import Reranker
+
+
+@patch("app.core.reranker.CrossEncoder")
+def test_rerank_applies_sigmoid_to_bound_scores(mock_cross_encoder_cls):
+    mock_model = mock_cross_encoder_cls.return_value
+    mock_model.predict.return_value = [0.9]
+
+    reranker = Reranker()
+    reranker.rerank("query", [{"text": "doc", "score": 0.5, "metadata": {}}], top_k=1)
+
+    _, kwargs = mock_model.predict.call_args
+    assert isinstance(kwargs["activation_fn"], Sigmoid)
 
 
 @patch("app.core.reranker.CrossEncoder")

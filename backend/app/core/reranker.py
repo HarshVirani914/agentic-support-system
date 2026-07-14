@@ -1,4 +1,5 @@
 from sentence_transformers import CrossEncoder
+from torch.nn import Sigmoid
 
 
 class Reranker:
@@ -15,13 +16,15 @@ class Reranker:
             top_k: Number of top results to return (default: 3)
 
         Returns:
-            Reranked documents sorted by cross-encoder relevance score (descending), truncated to top_k
+            Reranked documents sorted by cross-encoder relevance score (descending), truncated to
+            top_k. Scores are passed through a sigmoid so they land in (0, 1) like the rest of the
+            pipeline's scores — the model's raw output is an unbounded logit, not a probability.
         """
         if not documents:
             return []
 
         pairs = [(query, doc["text"]) for doc in documents]
-        scores = self.model.predict(pairs)
+        scores = self.model.predict(pairs, activation_fn=Sigmoid())
 
         reranked = [
             {**doc, "score": float(score)}
