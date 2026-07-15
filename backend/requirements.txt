@@ -15,6 +15,13 @@ langchain-google-genai
 # Vector Database
 qdrant-client
 fastembed
+
+# CPU-only torch build for sentence-transformers -- the default PyPI wheel
+# pulls in the full CUDA/GPU toolkit (nvidia-*, triton, ~2GB+), which is
+# both useless and a major memory/image-size cost on CPU-only hosts like
+# Render or Cloud Run.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
 sentence-transformers
 
 # Database (optional for MVP - can skip initially)
