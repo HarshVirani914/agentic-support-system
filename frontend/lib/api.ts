@@ -15,19 +15,15 @@ export class ApiError extends Error {
 
 export const sendChatMessage = async (
   message: string,
+  threadId: string,
   limit: number = 3
 ): Promise<ChatResponse> => {
-  const body: ChatRequest = {
-    message,
-    limit,
-  };
+  const body: ChatRequest = { message, limit, thread_id: threadId };
 
   try {
     const response = await fetch(`${API_BASE_URL}/api/chat`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
 
@@ -35,8 +31,7 @@ export const sendChatMessage = async (
       let errorDetails: ChatError | undefined;
       try {
         errorDetails = await response.json();
-      } catch {
-      }
+      } catch {}
 
       throw new ApiError(
         errorDetails?.message || `Request failed with status ${response.status}`,
@@ -45,17 +40,17 @@ export const sendChatMessage = async (
       );
     }
 
-    const data: ChatResponse = await response.json();
-    return data;
+    return await response.json();
   } catch (error) {
-    if (error instanceof ApiError) {
-      throw error;
-    }
-
+    if (error instanceof ApiError) throw error;
     throw new ApiError(
       error instanceof Error ? error.message : "An unexpected error occurred"
     );
   }
+};
+
+export const clearThread = async (threadId: string): Promise<void> => {
+  await fetch(`${API_BASE_URL}/api/chat/${threadId}`, { method: "DELETE" });
 };
 
 export const checkApiHealth = async (): Promise<boolean> => {

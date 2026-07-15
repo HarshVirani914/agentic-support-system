@@ -4,18 +4,19 @@ FastAPI backend with LangGraph multi-agent system for intelligent customer suppo
 
 ## Architecture
 
-Multi-agent system with conditional routing:
+Multi-agent system with conditional routing, hybrid search, and self-correcting reflection loop:
 
 ```
-Query → Classifier → Router → Specialized Search → Response Generator → JSON
+Query → Classifier → Router → Specialized Search (Hybrid + Rerank) → Response Generator → Grading Agent → JSON
 ```
 
 ### Agent Workflow
 
 1. **Classifier Node** - Categorizes query (order/shipping/general)
 2. **Router** - Conditional edges route to specialized agent
-3. **Specialized Search** - Category-optimized document retrieval
+3. **Specialized Search** - Category-optimized hybrid search (dense embeddings + sparse BM25, reranked by cross-encoder)
 4. **Response Generator** - Category-aware answer with sources
+5. **Grading Agent** - Checks groundedness of response; rewrites query and retries (max 2 attempts) if ungrounded
 
 ## Quick Start
 
@@ -102,8 +103,9 @@ Health check endpoint.
 ### Core Services (`app/core/`)
 
 **embeddings.py** - Text embeddings
-- Sentence Transformers (all-MiniLM-L6-v2)
-- 768-dimensional vectors (Google Gemini embedding-001)
+- Google Gemini Embedding 2 Preview (dense embeddings, 768-dimensional)
+- fastembed BM25 (sparse embeddings for hybrid search)
+- sentence-transformers cross-encoder (all-MiniLM-L6-v2) for reranking
 
 **vectorstore.py** - Qdrant operations
 - Collection management
@@ -158,6 +160,7 @@ Required:
 - `GROQ_API_KEY` - Groq API key
 - `QDRANT_URL` - Qdrant Cloud URL
 - `QDRANT_API_KEY` - Qdrant API key
+- `DATABASE_URL` - Neon Postgres connection string (for conversation persistence and LangGraph checkpointer)
 
 Optional:
 - `LANGCHAIN_TRACING_V2=true` - Enable LangSmith

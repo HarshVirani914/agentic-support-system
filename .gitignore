@@ -10,6 +10,7 @@ out/
 
 __pycache__/
 venv/
+backend/scripts/.eval_cache.json
 
 .cursor/
 agentic-support-system_api_key.txt

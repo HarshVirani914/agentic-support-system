@@ -45,14 +45,16 @@ User Query
     ↓
 [Conditional Router] - Routes based on category
     ↓
-[Specialized Search Agents]
+[Specialized Search Agents] - Hybrid (dense + sparse) search, reranked
     ├── Order Search - Enhanced with order-specific keywords
     ├── Shipping Search - Enhanced with shipping-specific keywords
     └── General Search - Broad search for all other queries
     ↓
 [Response Generator] - Category-aware answer generation
     ↓
-JSON Response (answer + sources + category)
+[Grading Agent] - Checks groundedness; rewrites query and retries (max 2x) if ungrounded
+    ↓
+JSON Response (answer + sources + category + retry_count + grounded)
 ```
 
 ## Tech Stack
@@ -64,8 +66,11 @@ JSON Response (answer + sources + category)
 - **LangGraph** - Agent orchestration and state management
 - **LangChain** - LLM abstractions
 - **Groq** - LLM API (Llama 3.3 70B)
+- **Neon Postgres** - Conversation persistence (LangGraph checkpointer)
 - **Qdrant Cloud** - Vector database
-- **Google Gemini Embedding 2 Preview** - Embeddings (768-dimensional embeddings)
+- **Google Gemini Embedding 2 Preview** - Dense embeddings (768-dimensional)
+- **fastembed** - Local BM25 sparse embeddings
+- **sentence-transformers** - Cross-encoder reranking (all-MiniLM-L6-v2)
 - **LangSmith** - Observability and tracing
 - **Pydantic** - Data validation
 
@@ -74,7 +79,8 @@ JSON Response (answer + sources + category)
 - **Next.js 15** - React framework (App Router)
 - **TypeScript** - Type safety
 - **TailwindCSS** - Styling
-- **shadcn/ui** - Component library
+- **shadcn/ui** - Component library (Chat Message, Conversation primitives)
+- **Vercel AI Elements** - Reasoning, Sources, Suggestion, PromptInput components
 - **Lucide React** - Icons
 - **Inter Font** - Typography
 

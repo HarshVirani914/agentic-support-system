@@ -14,11 +14,20 @@ langchain-google-genai
 
 # Vector Database
 qdrant-client
+fastembed
+sentence-transformers
 
 # Database (optional for MVP - can skip initially)
 # asyncpg
 # sqlalchemy[asyncio]
 
+# Persistence
+langgraph-checkpoint-postgres
+psycopg[binary,pool]
+
 # Utilities
 httpx
 python-multipart
+
+# Dev / Testing
+pytest

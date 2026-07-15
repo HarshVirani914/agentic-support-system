@@ -54,6 +54,12 @@ def load_documents(file_path: str) -> list[dict]:
 def clear_knowledge_base():
     """Clear all documents from the knowledge base."""
     print("🗑️  Clearing knowledge base...")
+    try:
+        vector_store.client.delete_collection(collection_name=vector_store.collection_name)
+        print("✅ Collection deleted")
+    except Exception as e:
+        print(f"⚠️  Could not delete collection: {e}")
+
     vector_store.create_collection()
     print("✅ Knowledge base cleared!")
 
