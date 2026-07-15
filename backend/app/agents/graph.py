@@ -61,7 +61,10 @@ def create_agent_graph(checkpointer: BaseCheckpointSaver) -> CompiledStateGraph:
 
 _pool = ConnectionPool(
     conninfo=settings.DATABASE_URL,
+    min_size=0,
     max_size=5,
+    max_idle=120,
+    check=ConnectionPool.check_connection,
     kwargs={"autocommit": True, "prepare_threshold": 0},
 )
 _checkpointer = PostgresSaver(_pool)
